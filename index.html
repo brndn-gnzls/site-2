@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>>>> Site-1</title>
-    <link rel="stylesheet" href="https://brndn-gnzls.github.io/gha-playground/build/variables.css?version=1.2">
+    <link rel="stylesheet" href="https://brndn-gnzls.github.io/gha-playground/build/variables.css">
     <style>
         .button {
             background-color: var(--global-btn-color);
@@ -30,15 +30,19 @@
             return response.headers.get('Last-Modified');
         }
     
-        let lastModified = await fetchCSSLastModified();
+        async function checkForCSSUpdates() {
+            let lastModified = await fetchCSSLastModified();
     
-        setInterval(async () => {
-            const currentLastModified = await fetchCSSLastModified();
-            if (lastModified !== currentLastModified) {
-                window.location.reload();
-                lastModified = currentLastModified;
-            }
-        }, 30000); // Check every 30 seconds
+            setInterval(async () => {
+                const currentLastModified = await fetchCSSLastModified();
+                if (lastModified !== currentLastModified) {
+                    window.location.reload();
+                    lastModified = currentLastModified;
+                }
+            }, 10000); // Check every 30 seconds
+        }
+    
+        checkForCSSUpdates(); // Immediately invoke the function
     </script>
 </body>
 </html>
