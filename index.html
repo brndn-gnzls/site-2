@@ -8,20 +8,43 @@
     <style>
         .button {
             background-color: var(--global-btn-color);
-            color: white;
-            padding: 10px;
-            border: none;
+            color: var(--global-btn-txt-secondary);
+            padding: var(--global-btn-padding-sm);
+            border: var(--global-btn-border-on);
             cursor: pointer;
-            width: 120px;
-            height: 80px;
+            width: var(--global-btn-width-lg);
+            height: var(--global-btn-height-sm);
+            border-radius: var(--global-br-lg);
+            margin-bottom:var(--global-margin-lg);
         }
-        
+        select {
+            appearance: var(--global-drd-app-off);
+            background: var(--global-drd-bgcolor-prim);
+            width: var(--global-drd-width-default);
+            height: var(--global-drd-height-default);
+            color: var(--global-btn-txt-primary);
+            cursor: pointer;
+            border: var(--global-drd-border-off);
+            border-radius: var(--global-drd-border-radius-sm);
+            padding: var(--global-btn-padding-sm);
+        }
     </style>
-
 </head>
 <body>
     <h1>Design Tokens Demo - Site 2</h1>
     <button class="button">Submit</button>
+    <div></div>
+    <div class="select">
+        <select name="slct" id="slct">
+            <option>Lorem Ipsum</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+            <option value="4">Four</option>
+            <option value="5">Five</option>
+            <option value="6">Six</option>
+        </select>
+    </div>
 
     <script>
         const cssLink = document.querySelector('link[href*="variables.css"]'); // Adjusted for flexibility
