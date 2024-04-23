@@ -47,17 +47,15 @@
     </div>
 
     <script>
-        const cssLink = document.querySelector('link[href*="variables.css"]'); // Adjusted for flexibility
+        const cssLink = document.querySelector('link[href*="variables.css"]');
     
         async function fetchCSSLastModified() {
-            // Append a timestamp to bypass cache when checking the last modified header
             const timestamp = new Date().getTime();
             const response = await fetch(`${cssLink.href}?ts=${timestamp}`, { method: 'HEAD' });
             return response.headers.get('Last-Modified');
         }
     
         async function updateCSSHref() {
-            // Update the CSS link with a new timestamp to force reload
             const timestamp = new Date().getTime();
             cssLink.href = `https://brndn-gnzls.github.io/gha-playground/build/variables.css?ts=${timestamp}`;
         }
@@ -68,13 +66,13 @@
             setInterval(async () => {
                 const currentLastModified = await fetchCSSLastModified();
                 if (lastModified !== currentLastModified) {
-                    updateCSSHref(); // Update CSS link instead of reloading the page
+                    updateCSSHref(); 
                     lastModified = currentLastModified;
                 }
-            }, 10000); // Adjusted the comment to match the interval
+            }, 10000); 
         }
     
-        checkForCSSUpdates(); // Immediately invoke the function
+        checkForCSSUpdates(); 
     </script>
 </body>
 </html>
