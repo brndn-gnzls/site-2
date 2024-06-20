@@ -107,7 +107,9 @@
         .text-balance {
             text-wrap: balance;
         }
-
+        .mctext {
+            margin-left: -100px;
+        }
 
         .for-nav {
           background-color: var(--global-bg-gray-200);
@@ -136,6 +138,7 @@
           background-image: var(--global-hero-img);
           background-position: var(--global-hero-pos);
           height: var(--global-hero-height);
+          padding-top: var(--global-pt-mh);
         }
 
         .mstbg h1 {
@@ -216,7 +219,7 @@
 
 <body>
     <header class='for-nav pl-20 text-sm'>
-        <ul class='flex justify-start py-4 font-bold'>
+        <ul class='flex justify-start py-4 font-bold text-base '>
             <li>For Employers</li>
             <li>For Producers</li>
             <li>For Providers</li>
@@ -224,9 +227,9 @@
         </ul>
     </header>
 
-    <nav class='feats flex justify-between items-center bg-white py-4 pl-20 pr-20 text-sm'>
+    <nav class='feats flex justify-between items-center bg-white py-4 pl-20 pr-20 text-xl'>
         <div class='flex items-center space-x-4'>
-            <div class='logo'>
+            <div class='logo mr-12'>
                 <img src='images/logo.svg' alt='logo' height='50' width='150'>
             </div>
             <ul class='flex space-x-24'>
@@ -243,19 +246,19 @@
 
     <section class='masthead'>
         <div class='msbg mstbg pt-20 pl-20'>
-            <h1 class='pb-4 w-1/2'>Medicaid Renewal and Healthcare Coverage</h1>
-            <p class='pb-4 w-1/2'>Learn more about Medicaid renewal, also called Medicaid redetermination, and the
+            <h1 class='pb-6 w-1/2 font-semibold'>Medicaid Renewal and Healthcare Coverage</h1>
+            <p class='pb-6 w-1/2 leading-8'>Learn more about Medicaid renewal, also called Medicaid redetermination, and the
                 possible
                 impacts to your current health plan. We are here to help you stay covered.</p>
-            <p class='pb-4 masthead-help w-1/2'><strong>Need help?</strong> Answer a few quick questions to learn which
+            <p class='pb-8 masthead-help w-1/2 leading-8'><strong>Need help?</strong> Answer a few quick questions to learn which
                 health coverage you qualify for, as well as daily needs like food and transportation.</p>
             <button class='getStBtn'>Get Started</button>
-            <p class='pb-4 pt-4'>Or call us at the number below to learn more.</p>
+            <p class='pb-6 pt-6'>Or call us at the number below to learn more.</p>
             <button class='blu-cta phNumBtn'>866-545-0385</button>
         </div>
     </section>
 
-    <section class="feats rets flex justify-between gap-8 text-white">
+    <section class="feats rets flex justify-between gap-8 text-white text-lg">
         <div class="feat-1 flex items-center space-x-5">
             <div class="feat-icon"></div>
             <span>Enrolled in a Medicaid, CHIP, or Expansion plan and want to prepare for renewal? Keep your address
@@ -277,7 +280,7 @@
 
     <section class='mdco text-center pt-20 pb-20 px-24'>
         <h2 class='pb-6'>Medicaid Renewal & Redetermination: What you Need To Know</h2>
-        <p class='pb-6'>During the Public Health Emergency (PHE), nearly all Medicaid, Children Health Insurance
+        <p class='pb-6 text-lg'>During the Public Health Emergency (PHE), nearly all Medicaid, Children Health Insurance
             Plans (CHIP), and Expansion members kept their coverage, regardless of changes in eligibility or status.
             Legislation signed on December 29, 2022 allowed states to begin removing ineligible members from their
             Medicaid programs starting April 1, 2023.</p>
@@ -298,8 +301,8 @@
 
             <section class='left-right-001 flex items-center px-8 pb-24 pt-8 text-sm mt-20 gap-12'>
                 <div class='flex-1'>
-                    <h2 class='text-2xl font-bold mb-4'>Three Steps to Renew your Medicaid Coverage</h2>
-                    <p class='mb-4'>We are here to help you prepare for your Medicaid renewal. Watch this video to get
+                    <h2 class='text-4xl font-bold mb-4'>Three Steps to Renew your Medicaid Coverage</h2>
+                    <p class='mb-4 text-xl'>We are here to help you prepare for your Medicaid renewal. Watch this video to get
                         answers to your renewal questions, and learn how simple it can be to stay covered.</p>
                 </div>
                 <div class='flex-1'>
@@ -310,19 +313,19 @@
             <div class='h-2 bg-gray-50 bar'></div>
 
             <section class='toggle-columns text-sm pt-20 px-8'>
-                <h1 class='text-center'>Frequently Asked Questions About Medicaid Renewal</h1>
+                <h1 class='text-center text-4xl'>Frequently Asked Questions About Medicaid Renewal</h1>
 
-                <div class='left-right flex items-start pt-12'>
+                <div class='left-right flex items-start pt-20'>
                     <div class='flex-1'>
                         <img src='images/faq1.webp' alt='what is medicaid renewal' width='440' height='470'
                             class='genrad'>
                     </div>
-                    <div class='flex-1 space-y-4'>
-                        <h3 class='mb-2 font-bold pb-2'>What is Medicaid Renewal</h3>
-                        <div class='list-w-ico flex items-start space-x-2 pb-4'>
+                    <div class='flex-1 space-y-4 mctext'>
+                        <h3 class='mb-8 font-bold pb-2 text-3xl'>What is Medicaid Renewal</h3>
+                        <div class='list-w-ico flex items-start space-x-2 pb-4 text-lg'>
                             <img src='images/feat1.svg' alt='feat1' width='40' height='40'>
                             <div>
-                                <p class='leading-6'>Medicaid renewal is a yearly review completed by your state to
+                                <p class='leading-7'>Medicaid renewal is a yearly review completed by your state to
                                     check if
                                     you’re still eligible for Medicaid coverage. In most states, you have to renew your
                                     coverage every year to keep it. Medicaid renewals have restarted in all states
@@ -334,17 +337,17 @@
                             </div>
                         </div>
 
-                        <div class='list-w-ico flex items-start space-x-2 pb-4'>
+                        <div class='list-w-ico flex items-start space-x-2 pb-4 text-lg'>
                             <img src='images/feat2.svg' alt='feat2' width='40' height='40'>
-                            <p class='leading-6'><strong>If you’ve had a change in income, age, or other qualifying
+                            <p class='leading-7'><strong>If you’ve had a change in income, age, or other qualifying
                                     factors</strong> since you enrolled in Medicaid, it’s possible you will no longer
                                 qualify.
                                 The only way to know for sure is to renew on time.</p>
                         </div>
 
-                        <div class='list-w-ico flex items-start space-x-2'>
+                        <div class='list-w-ico flex items-start space-x-2 text-lg'>
                             <img src='images/feat3.svg' alt='feat3' width='40' height='40'>
-                            <p class='leading-6'>When it’s time for you to renew, you’ll get a notice telling you what
+                            <p class='leading-7'>When it’s time for you to renew, you’ll get a notice telling you what
                                 to
                                 do. <strong>Be sure to follow the steps to renew before your deadline.</strong> If you
                                 have
